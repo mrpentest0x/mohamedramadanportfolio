@@ -32,10 +32,10 @@ function NetworkVisual() {
       {links.map(([a, b], i) => (
         <motion.line
           key={i}
-          x1={nodes[a].x}
-          y1={nodes[a].y}
-          x2={nodes[b].x}
-          y2={nodes[b].y}
+          x1={nodes[a]!.x}
+          y1={nodes[a]!.y}
+          x2={nodes[b]!.x}
+          y2={nodes[b]!.y}
           stroke="currentColor"
           strokeWidth="0.25"
           className="text-primary/40"
@@ -70,8 +70,8 @@ function NetworkVisual() {
         animate={{ opacity: [0, 1, 1, 0] }}
         transition={{ duration: 3, repeat: Infinity, repeatDelay: 1 }}
         style={{ offsetPath: "none" }}
-        cx={nodes[4].x}
-        cy={nodes[4].y}
+        cx={nodes[4]!.x}
+        cy={nodes[4]!.y}
       />
     </svg>
   );
