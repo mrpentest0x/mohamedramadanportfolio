@@ -88,10 +88,10 @@ export function Contact() {
                 maxLength={1000}
                 placeholder="Share the details of your project or question."
                 className={`${field} mt-2 resize-y`}
-                aria-invalid={Boolean(errors.message)}
+                aria-invalid={Boolean(errors["message"])}
               />
-              {errors.message ? (
-                <p className="mt-2 text-xs text-destructive">{errors.message}</p>
+              {errors["message"] ? (
+                <p className="mt-2 text-xs text-destructive">{errors["message"]}</p>
               ) : null}
             </div>
             <button
