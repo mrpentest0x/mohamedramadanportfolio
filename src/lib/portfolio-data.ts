@@ -29,36 +29,39 @@ export const navSections = [
 
 export const skillGroups = [
   {
-    name: "Offensive Security",
+    name: "Technical",
     items: [
       "Penetration Testing",
       "Vulnerability Assessment",
       "Web Application Security",
       "Ethical Hacking",
       "Attack Surface Analysis",
-    ],
-  },
-  {
-    name: "Network Security",
-    items: [
       "Network Security",
       "TCP/IP",
       "IP Routing",
       "VLANs",
       "Access Control Lists",
       "Network Troubleshooting",
+      "Linux",
+      "Windows",
+      "Machine Learning",
+      "Cloud Fundamentals",
     ],
   },
   {
-    name: "Security Tools",
-    items: ["Kali Linux", "Nmap", "Wireshark", "Burp Suite", "Metasploit", "Splunk"],
+    name: "Tools",
+    items: [
+      "Kali Linux",
+      "Nmap",
+      "Wireshark",
+      "Burp Suite",
+      "Metasploit",
+      "Splunk",
+      "Git",
+      "AI-Assisted Security Tools",
+    ],
   },
-  { name: "Programming", items: ["Python", "SQL"] },
-  { name: "Systems", items: ["Linux", "Windows"] },
-  {
-    name: "Other",
-    items: ["Machine Learning", "AI-Assisted Security Tools", "Cloud Fundamentals", "Git"],
-  },
+  { name: "Languages", items: ["Python", "SQL"] },
 ];
 
 export const experience = [
