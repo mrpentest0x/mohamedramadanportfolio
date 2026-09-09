@@ -186,6 +186,7 @@ export const projects = [
   },
   {
     title: "Network Penetration Testing Lab",
+    github: "https://github.com/PedroFBRM/nmap-scan-analysis-lab",
     overview:
       "Performed network reconnaissance and enumeration using Nmap in an authorized lab environment.",
     objective: "Map hosts and services on a lab network and study their exposure.",
@@ -207,6 +208,7 @@ export const projects = [
   },
   {
     title: "Networking Labs",
+    github: "https://github.com/panhapichkhe/secure-small-enterprise-network",
     overview: "Designed and configured networking environments using Cisco Packet Tracer.",
     objective: "Build working topologies and practise structured troubleshooting.",
     tech: [
@@ -226,6 +228,7 @@ export const projects = [
   },
   {
     title: "Splunk Security Monitoring",
+    github: "https://github.com/barkha-17/SOC-Security-Monitoring-Splunk",
     overview:
       "Built a centralized log collection and monitoring setup across multiple virtual machines.",
     objective: "Bring logs from several systems into one place and review security events.",
