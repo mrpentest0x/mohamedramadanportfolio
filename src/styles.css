@@ -31,8 +31,9 @@
   --color-ring: var(--ring);
   --color-surface: var(--surface);
   --color-cyan: var(--cyan);
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* Single source of truth: change --font-brand below to restyle the whole site */
+  --font-display: var(--font-brand);
+  --font-sans: var(--font-brand);
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
