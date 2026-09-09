@@ -38,6 +38,8 @@
 }
 
 :root {
+  /* ===== CENTRAL FONT SETTING — change this one value to restyle the site ===== */
+  --font-brand: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --radius: 0.5rem;
   --background: oklch(0.16 0.01 260);
   --foreground: oklch(0.96 0.005 250);
