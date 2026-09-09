@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ChevronDown, Github } from "lucide-react";
+import { ChevronDown, ExternalLink, Github } from "lucide-react";
 import { Reveal, Section, SectionHeading } from "./Reveal";
 import { projects } from "@/lib/portfolio-data";
 
@@ -111,10 +111,19 @@ export function Projects() {
                               ))}
                             </ul>
                           </div>
-                          <p className="flex items-center gap-2 font-mono text-[11px] tracking-widest text-muted-foreground">
-                            <Github className="size-4" aria-hidden="true" /> Repository link coming
-                            soon
-                          </p>
+                          <a
+                            href={p.github}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="group/gh inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-4 py-2.5 text-sm font-medium text-primary transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/20 hover:shadow-[0_10px_30px_-12px_color-mix(in_oklab,var(--primary)_60%,transparent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                          >
+                            <Github className="size-4" aria-hidden="true" />
+                            View on GitHub
+                            <ExternalLink
+                              className="size-3.5 transition-transform duration-300 group-hover/gh:translate-x-0.5 group-hover/gh:-translate-y-0.5"
+                              aria-hidden="true"
+                            />
+                          </a>
                         </div>
                       </div>
                     </motion.div>

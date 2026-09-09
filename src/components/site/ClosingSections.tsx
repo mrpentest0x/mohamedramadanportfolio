@@ -1,4 +1,12 @@
-import { Award, BookOpen, Download, Github, Linkedin, MessageSquareQuote } from "lucide-react";
+import {
+  Award,
+  BookOpen,
+  Download,
+  ExternalLink,
+  Github,
+  Linkedin,
+  MessageSquareQuote,
+} from "lucide-react";
 import { Reveal, Section, SectionHeading } from "./Reveal";
 import {
   CV_URL,
@@ -16,14 +24,32 @@ export function Certifications() {
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {courses.map((c, i) => (
           <Reveal key={c.name} delay={i * 0.04}>
-            <article className="card-hover glass flex h-full items-start gap-4 rounded-xl p-6">
-              <BookOpen className="size-5 shrink-0 text-primary" aria-hidden="true" />
-              <div>
-                <h3 className="text-sm font-semibold leading-snug">{c.name}</h3>
-                <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                  {c.provider}
-                </p>
+            <article className="card-hover glass flex h-full flex-col gap-4 rounded-xl p-6">
+              <div className="flex items-start gap-4">
+                <BookOpen className="size-5 shrink-0 text-primary" aria-hidden="true" />
+                <div className="min-w-0">
+                  <h3 className="text-sm font-semibold leading-snug">{c.name}</h3>
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                    {c.provider}
+                    {c.detail ? ` · ${c.detail}` : ""}
+                  </p>
+                  <p className="mt-2 break-words font-mono text-[10px] tracking-widest text-cyan">
+                    ID {c.code} · {c.date}
+                  </p>
+                </div>
               </div>
+              <a
+                href={c.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group/cert mt-auto inline-flex items-center justify-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-4 py-2.5 text-sm font-medium text-primary transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                View Certificate
+                <ExternalLink
+                  className="size-3.5 transition-transform duration-300 group-hover/cert:translate-x-0.5 group-hover/cert:-translate-y-0.5"
+                  aria-hidden="true"
+                />
+              </a>
             </article>
           </Reveal>
         ))}

@@ -1,4 +1,11 @@
 import cvAsset from "@/assets/cv.asset.json";
+import trackCert from "@/assets/certs/cyber-beginners-track.pdf.asset.json";
+import ethicalHackingCert from "@/assets/certs/ethical-hacking.pdf.asset.json";
+import redhatCert from "@/assets/certs/redhat-rh124.pdf.asset.json";
+import pythonCert from "@/assets/certs/python-basics.pdf.asset.json";
+import networkImplCert from "@/assets/certs/network-implementation.pdf.asset.json";
+import networkSecurityCert from "@/assets/certs/network-security-intro.pdf.asset.json";
+import networkFundamentalsCert from "@/assets/certs/network-fundamentals.pdf.asset.json";
 
 export const CV_URL = cvAsset.url;
 
@@ -157,6 +164,7 @@ export const services = [
 export const projects = [
   {
     title: "Web Security Practice Lab",
+    github: "https://github.com/LMD10/owasp-top10-web-vulnerability-analysis",
     overview:
       "Conducted web application security testing in a controlled training environment using Burp Suite.",
     objective:
@@ -178,6 +186,7 @@ export const projects = [
   },
   {
     title: "Network Penetration Testing Lab",
+    github: "https://github.com/PedroFBRM/nmap-scan-analysis-lab",
     overview:
       "Performed network reconnaissance and enumeration using Nmap in an authorized lab environment.",
     objective: "Map hosts and services on a lab network and study their exposure.",
@@ -199,6 +208,7 @@ export const projects = [
   },
   {
     title: "Networking Labs",
+    github: "https://github.com/panhapichkhe/secure-small-enterprise-network",
     overview: "Designed and configured networking environments using Cisco Packet Tracer.",
     objective: "Build working topologies and practise structured troubleshooting.",
     tech: [
@@ -218,6 +228,7 @@ export const projects = [
   },
   {
     title: "Splunk Security Monitoring",
+    github: "https://github.com/barkha-17/SOC-Security-Monitoring-Splunk",
     overview:
       "Built a centralized log collection and monitoring setup across multiple virtual machines.",
     objective: "Bring logs from several systems into one place and review security events.",
@@ -238,13 +249,62 @@ export const projects = [
 ];
 
 export const courses = [
-  { name: "Cybersecurity for Beginner Track", provider: "Mahara Tech" },
-  { name: "Ethical Hacking", provider: "Course" },
-  { name: "Red Hat System Administration 1", provider: "Course" },
-  { name: "Python Programming Basics", provider: "Course" },
-  { name: "Implementation of Network Fundamentals", provider: "Course" },
-  { name: "Introduction to Network Security", provider: "Course" },
-  { name: "Computer Network Fundamentals", provider: "Course" },
+  {
+    name: "Cybersecurity for Beginner Track",
+    provider: "Mahara Tech",
+    detail: "8 Courses · 35 Hours",
+    code: "quCc6cs5VK",
+    date: "15/02/24",
+    url: trackCert.url,
+  },
+  {
+    name: "Ethical Hacking",
+    provider: "Mahara Tech",
+    detail: "3 Hours, 29 Minutes",
+    code: "5SYev55pIz",
+    date: "22/06/26",
+    url: ethicalHackingCert.url,
+  },
+  {
+    name: "Red Hat System Administration I",
+    provider: "Mahara Tech",
+    detail: "9 Hours, 11 Minutes",
+    code: "ZyXjEN9YZJ",
+    date: "15/02/24",
+    url: redhatCert.url,
+  },
+  {
+    name: "Python Programming Basics",
+    provider: "Mahara Tech",
+    detail: "1 Hour, 38 Minutes",
+    code: "SeEUTEXcmS",
+    date: "20/2024",
+    url: pythonCert.url,
+  },
+  {
+    name: "Implementation of Computer Network Fundamentals",
+    provider: "Mahara Tech",
+    detail: "2 Hours",
+    code: "YZM3yPClSR",
+    date: "15/02/24",
+    url: networkImplCert.url,
+  },
+  {
+    name: "Introduction to Network Security",
+    provider: "Mahara Tech",
+    detail: "1 Hour, 15 Minutes",
+    code: "o0HxoBqHHm",
+    date: "22/06/26",
+    url: networkSecurityCert.url,
+  },
+  {
+    name: "Computer Network Fundamentals",
+    provider: "Mahara Tech",
+    detail: "1 Hour",
+    code: "b7gFquYRKY",
+    date: "15/02/24",
+    url: networkFundamentalsCert.url,
+  },
 ];
 
 export const studiedTracks = ["CCNA", "CompTIA Security+", "eJPTv1"];
