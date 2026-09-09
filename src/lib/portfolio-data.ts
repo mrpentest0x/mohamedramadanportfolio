@@ -238,13 +238,62 @@ export const projects = [
 ];
 
 export const courses = [
-  { name: "Cybersecurity for Beginner Track", provider: "Mahara Tech" },
-  { name: "Ethical Hacking", provider: "Course" },
-  { name: "Red Hat System Administration 1", provider: "Course" },
-  { name: "Python Programming Basics", provider: "Course" },
-  { name: "Implementation of Network Fundamentals", provider: "Course" },
-  { name: "Introduction to Network Security", provider: "Course" },
-  { name: "Computer Network Fundamentals", provider: "Course" },
+  {
+    name: "Cybersecurity for Beginner Track",
+    provider: "Mahara Tech",
+    detail: "8 Courses · 35 Hours",
+    code: "quCc6cs5VK",
+    date: "15/02/24",
+    url: trackCert.url,
+  },
+  {
+    name: "Ethical Hacking",
+    provider: "Mahara Tech",
+    detail: "3 Hours, 29 Minutes",
+    code: "5SYev55pIz",
+    date: "22/06/26",
+    url: ethicalHackingCert.url,
+  },
+  {
+    name: "Red Hat System Administration I",
+    provider: "Mahara Tech",
+    detail: "9 Hours, 11 Minutes",
+    code: "ZyXjEN9YZJ",
+    date: "15/02/24",
+    url: redhatCert.url,
+  },
+  {
+    name: "Python Programming Basics",
+    provider: "Mahara Tech",
+    detail: "1 Hour, 38 Minutes",
+    code: "SeEUTEXcmS",
+    date: "20/2024",
+    url: pythonCert.url,
+  },
+  {
+    name: "Implementation of Computer Network Fundamentals",
+    provider: "Mahara Tech",
+    detail: "2 Hours",
+    code: "YZM3yPClSR",
+    date: "15/02/24",
+    url: networkImplCert.url,
+  },
+  {
+    name: "Introduction to Network Security",
+    provider: "Mahara Tech",
+    detail: "1 Hour, 15 Minutes",
+    code: "o0HxoBqHHm",
+    date: "22/06/26",
+    url: networkSecurityCert.url,
+  },
+  {
+    name: "Computer Network Fundamentals",
+    provider: "Mahara Tech",
+    detail: "1 Hour",
+    code: "b7gFquYRKY",
+    date: "15/02/24",
+    url: networkFundamentalsCert.url,
+  },
 ];
 
 export const studiedTracks = ["CCNA", "CompTIA Security+", "eJPTv1"];
