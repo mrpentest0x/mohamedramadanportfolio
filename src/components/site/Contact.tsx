@@ -158,12 +158,21 @@ export function Contact() {
                 </span>
               </a>
             </li>
-            <li className="flex items-center gap-4 rounded-xl border border-dashed border-border p-5 text-muted-foreground">
-              <Github className="size-5" aria-hidden="true" />
-              <span>
-                <span className="block font-mono text-[10px] uppercase tracking-widest">GitHub</span>
-                <span className="text-sm">{profile.githubLabel}</span>
-              </span>
+            <li>
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="card-hover glass flex items-center gap-4 rounded-xl p-5"
+              >
+                <Github className="size-5 text-primary" aria-hidden="true" />
+                <span>
+                  <span className="block font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                    GitHub
+                  </span>
+                  <span className="text-sm">{profile.githubLabel}</span>
+                </span>
+              </a>
             </li>
           </ul>
         </Reveal>

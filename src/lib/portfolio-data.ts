@@ -18,9 +18,54 @@ export const profile = {
   phone: "+20 115 382 8591",
   linkedin: "https://linkedin.com/in/mrpentest",
   linkedinLabel: "linkedin.com/in/mrpentest",
-  github: "#",
-  githubLabel: "GitHub — link coming soon",
+  github: "https://github.com/mrpentest0x",
+  githubLabel: "github.com/mrpentest0x",
 };
+
+export const testimonials = [
+  {
+    name: "Aya Magdy Youssef",
+    role: "Certified Instructor Huawei & Cis…",
+    text: "أداءك رائع بالتوفيق دايما ❤️😍",
+    rtl: true,
+  },
+  {
+    name: "Khaled Gamal Seif",
+    role: "Bug Bounty Hunter @ HackerOne",
+    text: "From learning the basics to actually building projects, your progress is really impressive bro. Keep grinding and I'm sure you'll achieve a lot in Cybersecurity",
+    rtl: false,
+  },
+  {
+    name: "Adham Eltahawy",
+    role: "Penetration Tester Trainee @ D…",
+    text: "Proud of you bro! 🔥 You've been putting in a lot of work lately, and it really shows. Keep learning, keep building, and keep going. The best is yet to come ❤️❤️🔥",
+    rtl: false,
+  },
+  {
+    name: "Moaz Mohamed",
+    role: "Junior Penetration Tester | @DE…",
+    text: "Keep going bro 🔥 Your progress is honestly impressive. Keep learning and building, you're on the right track 👏",
+    rtl: false,
+  },
+  {
+    name: "Hamdy Mohamed",
+    role: "Aspiring Full Stack .NET Develop…",
+    text: "Well deserved bro! 👏 I know how much effort you've been putting into your Cybersecurity journey. Keep working hard and chasing your goals 🔥",
+    rtl: false,
+  },
+  {
+    name: "Mohamed Ahmed",
+    role: "طالب في Beni Suef National Unive…",
+    text: "You're doing a great job bro! I've seen how much you've been working on yourself and your technical skills. Keep going, you're definitely getting better every day 🔥",
+    rtl: false,
+  },
+  {
+    name: "mazen ahme…",
+    role: "Student at Beni-Suef University",
+    text: "Big respect bro 👏 The effort you're putting into Cybersecurity and Networking is clear in everything you're building. Keep pushing and never stop learning",
+    rtl: false,
+  },
+];
 
 export const navSections = [
   { id: "about", label: "About" },
