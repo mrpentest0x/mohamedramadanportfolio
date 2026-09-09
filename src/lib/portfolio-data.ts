@@ -1,4 +1,11 @@
 import cvAsset from "@/assets/cv.asset.json";
+import trackCert from "@/assets/certs/cyber-beginners-track.pdf.asset.json";
+import ethicalHackingCert from "@/assets/certs/ethical-hacking.pdf.asset.json";
+import redhatCert from "@/assets/certs/redhat-rh124.pdf.asset.json";
+import pythonCert from "@/assets/certs/python-basics.pdf.asset.json";
+import networkImplCert from "@/assets/certs/network-implementation.pdf.asset.json";
+import networkSecurityCert from "@/assets/certs/network-security-intro.pdf.asset.json";
+import networkFundamentalsCert from "@/assets/certs/network-fundamentals.pdf.asset.json";
 
 export const CV_URL = cvAsset.url;
 
@@ -157,6 +164,7 @@ export const services = [
 export const projects = [
   {
     title: "Web Security Practice Lab",
+    github: "https://github.com/LMD10/owasp-top10-web-vulnerability-analysis",
     overview:
       "Conducted web application security testing in a controlled training environment using Burp Suite.",
     objective:
