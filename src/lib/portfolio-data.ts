@@ -223,7 +223,7 @@ export const services = [
 export const projects = [
   {
     title: "Web Security Practice Lab",
-    github: "https://github.com/LMD10/owasp-top10-web-vulnerability-analysis",
+    github: profile.github,
     overview:
       "Conducted web application security testing in a controlled training environment using Burp Suite.",
     objective:
@@ -245,7 +245,7 @@ export const projects = [
   },
   {
     title: "Network Penetration Testing Lab",
-    github: "https://github.com/PedroFBRM/nmap-scan-analysis-lab",
+    github: profile.github,
     overview:
       "Performed network reconnaissance and enumeration using Nmap in an authorized lab environment.",
     objective: "Map hosts and services on a lab network and study their exposure.",
@@ -267,7 +267,7 @@ export const projects = [
   },
   {
     title: "Networking Labs",
-    github: "https://github.com/panhapichkhe/secure-small-enterprise-network",
+    github: profile.github,
     overview: "Designed and configured networking environments using Cisco Packet Tracer.",
     objective: "Build working topologies and practise structured troubleshooting.",
     tech: [
@@ -287,7 +287,7 @@ export const projects = [
   },
   {
     title: "Splunk Security Monitoring",
-    github: "https://github.com/barkha-17/SOC-Security-Monitoring-Splunk",
+    github: profile.github,
     overview:
       "Built a centralized log collection and monitoring setup across multiple virtual machines.",
     objective: "Bring logs from several systems into one place and review security events.",
