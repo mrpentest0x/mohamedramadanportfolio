@@ -99,17 +99,14 @@ export function Hero() {
           </motion.p>
 
           <h1 className="mt-6 text-4xl leading-[0.95] font-bold uppercase sm:text-6xl lg:text-7xl">
-            {["Securing systems.", "Finding weaknesses."].map((line, i) => (
-              <motion.span
-                key={line}
-                className="block"
-                initial={{ opacity: 0, y: 28 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.15 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              >
-                {i === 1 ? <span className="text-primary">{line}</span> : line}
-              </motion.span>
-            ))}
+            <motion.span
+              className="block"
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            >
+              Mohamed <span className="text-primary">Ramadan</span>
+            </motion.span>
           </h1>
 
           <motion.p

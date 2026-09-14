@@ -15,6 +15,7 @@ import {
   courses,
   profile,
   studiedTracks,
+  testimonials,
 } from "@/lib/portfolio-data";
 
 export function Certifications() {
@@ -99,24 +100,37 @@ export function Testimonials() {
   return (
     <Section id="testimonials">
       <SectionHeading index="10" title="Testimonials" />
-      <Reveal className="mt-10">
-        <div className="glass flex flex-col items-center rounded-xl px-6 py-16 text-center">
-          <MessageSquareQuote className="size-8 text-primary/70" aria-hidden="true" />
-          <p className="mt-6 max-w-lg font-display text-lg text-muted-foreground sm:text-xl">
-            Testimonials from instructors, mentors, and collaborators will appear here.
-          </p>
-          <div className="mt-10 grid w-full max-w-3xl gap-4 sm:grid-cols-3" aria-hidden="true">
-            {[0, 1, 2].map((i) => (
-              <div key={i} className="rounded-lg border border-dashed border-border p-5">
-                <div className="h-2 w-3/4 rounded bg-muted" />
-                <div className="mt-3 h-2 w-full rounded bg-muted" />
-                <div className="mt-3 h-2 w-2/3 rounded bg-muted" />
-                <div className="mt-6 h-2 w-1/2 rounded bg-muted/70" />
+      <div className="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3">
+        {testimonials.map((testimonial, i) => (
+          <Reveal key={testimonial.name} delay={i * 0.04} className="mb-5 break-inside-avoid">
+            <article className="card-hover glass overflow-hidden rounded-xl">
+              <a
+                href={testimonial.image}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group block overflow-hidden border-b border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring"
+                aria-label={`View ${testimonial.name}'s original testimonial`}
+              >
+                <img
+                  src={testimonial.image}
+                  alt={`LinkedIn testimonial from ${testimonial.name}`}
+                  loading="lazy"
+                  className="h-auto w-full object-contain transition-transform duration-300 group-hover:scale-[1.015]"
+                />
+              </a>
+              <div className="flex items-start gap-3 p-5">
+                <MessageSquareQuote className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
+                <div className="min-w-0">
+                  <h3 className="text-sm font-semibold">{testimonial.name}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    {testimonial.role}
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </Reveal>
+            </article>
+          </Reveal>
+        ))}
+      </div>
     </Section>
   );
 }

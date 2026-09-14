@@ -6,6 +6,13 @@ import pythonCert from "@/assets/certs/python-basics.pdf.asset.json";
 import networkImplCert from "@/assets/certs/network-implementation.pdf.asset.json";
 import networkSecurityCert from "@/assets/certs/network-security-intro.pdf.asset.json";
 import networkFundamentalsCert from "@/assets/certs/network-fundamentals.pdf.asset.json";
+import ayaTestimonial from "@/assets/testimonials/aya-magdy.jpeg.asset.json";
+import khaledTestimonial from "@/assets/testimonials/khaled-gamal.jpeg.asset.json";
+import adhamTestimonial from "@/assets/testimonials/adham-eltahawy.jpeg.asset.json";
+import moazTestimonial from "@/assets/testimonials/moaz-mohamed.jpeg.asset.json";
+import hamdyTestimonial from "@/assets/testimonials/hamdy-mohamed.jpeg.asset.json";
+import mohamedTestimonial from "@/assets/testimonials/mohamed-ahmed.jpeg.asset.json";
+import mazenTestimonial from "@/assets/testimonials/mazen-ahmed.jpeg.asset.json";
 
 export const CV_URL = cvAsset.url;
 
@@ -28,42 +35,49 @@ export const testimonials = [
     role: "Certified Instructor Huawei & Cis…",
     text: "أداءك رائع بالتوفيق دايما ❤️😍",
     rtl: true,
+    image: ayaTestimonial.url,
   },
   {
     name: "Khaled Gamal Seif",
     role: "Bug Bounty Hunter @ HackerOne",
     text: "From learning the basics to actually building projects, your progress is really impressive bro. Keep grinding and I'm sure you'll achieve a lot in Cybersecurity",
     rtl: false,
+    image: khaledTestimonial.url,
   },
   {
     name: "Adham Eltahawy",
     role: "Penetration Tester Trainee @ D…",
     text: "Proud of you bro! 🔥 You've been putting in a lot of work lately, and it really shows. Keep learning, keep building, and keep going. The best is yet to come ❤️❤️🔥",
     rtl: false,
+    image: adhamTestimonial.url,
   },
   {
     name: "Moaz Mohamed",
     role: "Junior Penetration Tester | @DE…",
     text: "Keep going bro 🔥 Your progress is honestly impressive. Keep learning and building, you're on the right track 👏",
     rtl: false,
+    image: moazTestimonial.url,
   },
   {
     name: "Hamdy Mohamed",
     role: "Aspiring Full Stack .NET Develop…",
     text: "Well deserved bro! 👏 I know how much effort you've been putting into your Cybersecurity journey. Keep working hard and chasing your goals 🔥",
     rtl: false,
+    image: hamdyTestimonial.url,
   },
   {
     name: "Mohamed Ahmed",
     role: "طالب في Beni Suef National Unive…",
     text: "You're doing a great job bro! I've seen how much you've been working on yourself and your technical skills. Keep going, you're definitely getting better every day 🔥",
     rtl: false,
+    image: mohamedTestimonial.url,
   },
   {
     name: "mazen ahme…",
     role: "Student at Beni-Suef University",
     text: "Big respect bro 👏 The effort you're putting into Cybersecurity and Networking is clear in everything you're building. Keep pushing and never stop learning",
     rtl: false,
+    image: mazenTestimonial.url,
   },
 ];
 
