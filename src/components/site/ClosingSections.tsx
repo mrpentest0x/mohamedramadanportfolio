@@ -1,12 +1,23 @@
+import { useState } from "react";
 import {
   Award,
   BookOpen,
   Download,
+  Eye,
   ExternalLink,
   Github,
   Linkedin,
   MessageSquareQuote,
+  ShieldCheck,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Reveal, Section, SectionHeading } from "./Reveal";
 import {
   CV_URL,
@@ -19,61 +30,120 @@ import {
 } from "@/lib/portfolio-data";
 
 export function Certifications() {
-  return (
-    <Section id="certifications">
-      <SectionHeading index="08" title="Certifications & Courses" />
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {courses.map((c, i) => (
-          <Reveal key={c.name} delay={i * 0.04}>
-            <article className="card-hover glass flex h-full flex-col gap-4 rounded-xl p-6">
-              <div className="flex items-start gap-4">
-                <BookOpen className="size-5 shrink-0 text-primary" aria-hidden="true" />
-                <div className="min-w-0">
-                  <h3 className="text-sm font-semibold leading-snug">{c.name}</h3>
-                  <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                    {c.provider}
-                    {c.detail ? ` · ${c.detail}` : ""}
-                  </p>
-                  <p className="mt-2 break-words font-mono text-[10px] tracking-widest text-cyan">
-                    ID {c.code} · {c.date}
-                  </p>
-                </div>
-              </div>
-              <a
-                href={c.url}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="group/cert mt-auto inline-flex items-center justify-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-4 py-2.5 text-sm font-medium text-primary transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              >
-                View Certificate
-                <ExternalLink
-                  className="size-3.5 transition-transform duration-300 group-hover/cert:translate-x-0.5 group-hover/cert:-translate-y-0.5"
-                  aria-hidden="true"
-                />
-              </a>
-            </article>
-          </Reveal>
-        ))}
-      </div>
+  const [selectedCertificate, setSelectedCertificate] = useState<(typeof courses)[number] | null>(
+    null,
+  );
 
-      <Reveal className="mt-8">
-        <div className="rounded-xl border border-cyan/30 bg-cyan/5 p-7">
-          <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">
-            Currently studied / prepared
-          </p>
-          <ul className="mt-4 flex flex-wrap gap-3">
-            {studiedTracks.map((t) => (
-              <li key={t} className="rounded-md border border-border px-4 py-2 text-sm font-medium">
-                {t}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-sm text-muted-foreground">
-            These are study and preparation areas, not completed certifications.
-          </p>
+  return (
+    <>
+      <Section id="certifications">
+        <SectionHeading index="08" title="Certifications & Courses" />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {courses.map((c, i) => (
+            <Reveal key={c.name} delay={i * 0.04}>
+              <article className="card-hover glass flex h-full flex-col gap-4 rounded-xl p-6">
+                <div className="flex items-start gap-4">
+                  <BookOpen className="size-5 shrink-0 text-primary" aria-hidden="true" />
+                  <div className="min-w-0">
+                    <h3 className="text-sm font-semibold leading-snug">{c.name}</h3>
+                    <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                      {c.provider}
+                      {c.detail ? ` · ${c.detail}` : ""}
+                    </p>
+                    <p className="mt-2 break-words font-mono text-[10px] tracking-widest text-cyan">
+                      ID {c.code} · {c.date}
+                    </p>
+                  </div>
+                </div>
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setSelectedCertificate(c)}
+                  className="group/cert mt-auto h-auto border-primary/40 bg-primary/10 px-4 py-2.5 text-primary transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/20 hover:text-primary"
+                  aria-label={`Preview certificate: ${c.name}`}
+                >
+                  <Eye className="size-4" aria-hidden="true" />
+                  View Certificate
+                  <ExternalLink
+                    className="size-3.5 transition-transform duration-300 group-hover/cert:translate-x-0.5 group-hover/cert:-translate-y-0.5"
+                    aria-hidden="true"
+                  />
+                </Button>
+              </article>
+            </Reveal>
+          ))}
         </div>
-      </Reveal>
-    </Section>
+
+        <Reveal className="mt-8">
+          <div className="rounded-xl border border-cyan/30 bg-cyan/5 p-7">
+            <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">
+              Currently studied / prepared
+            </p>
+            <ul className="mt-4 flex flex-wrap gap-3">
+              {studiedTracks.map((t) => (
+                <li key={t} className="rounded-md border border-border px-4 py-2 text-sm font-medium">
+                  {t}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm text-muted-foreground">
+              These are study and preparation areas, not completed certifications.
+            </p>
+          </div>
+        </Reveal>
+      </Section>
+
+      <Dialog
+        open={selectedCertificate !== null}
+        onOpenChange={(isOpen) => {
+          if (!isOpen) setSelectedCertificate(null);
+        }}
+      >
+        <DialogContent className="flex h-[92dvh] w-[calc(100%-1rem)] max-w-6xl flex-col gap-0 overflow-hidden border-primary/25 bg-background p-0 shadow-2xl sm:rounded-xl">
+          {selectedCertificate ? (
+            <>
+              <DialogHeader className="shrink-0 border-b border-border bg-surface px-5 py-4 pr-14 text-left sm:px-6">
+                <div className="flex items-start gap-3">
+                  <span className="rounded-md border border-primary/40 bg-primary/10 p-2 text-primary">
+                    <ShieldCheck className="size-5" aria-hidden="true" />
+                  </span>
+                  <div className="min-w-0">
+                    <DialogTitle className="pr-2 text-base leading-snug sm:text-lg">
+                      {selectedCertificate.name}
+                    </DialogTitle>
+                    <DialogDescription className="mt-1 font-mono text-[10px] uppercase tracking-widest">
+                      {selectedCertificate.provider} · ID {selectedCertificate.code}
+                    </DialogDescription>
+                  </div>
+                </div>
+              </DialogHeader>
+
+              <div className="relative min-h-0 flex-1 bg-muted/30 p-2 sm:p-4">
+                <div className="tech-grid pointer-events-none absolute inset-0 opacity-30" aria-hidden="true" />
+                <iframe
+                  src={selectedCertificate.url}
+                  title={`${selectedCertificate.name} certificate`}
+                  className="relative h-full w-full rounded-md border border-border bg-card"
+                />
+              </div>
+
+              <div className="flex shrink-0 flex-col gap-3 border-t border-border bg-surface px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                  Issued {selectedCertificate.date}
+                  {selectedCertificate.detail ? ` · ${selectedCertificate.detail}` : ""}
+                </p>
+                <Button asChild size="sm" className="w-full sm:w-auto">
+                  <a href={selectedCertificate.url} target="_blank" rel="noreferrer noopener">
+                    Open Original
+                    <ExternalLink aria-hidden="true" />
+                  </a>
+                </Button>
+              </div>
+            </>
+          ) : null}
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }
 

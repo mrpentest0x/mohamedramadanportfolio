@@ -127,7 +127,7 @@ export const skillGroups = [
       "AI-Assisted Security Tools",
     ],
   },
-  { name: "Languages", items: ["Python", "SQL"] },
+  { name: "Languages", items: ["Arabic", "English"] },
 ];
 
 export const experience = [
