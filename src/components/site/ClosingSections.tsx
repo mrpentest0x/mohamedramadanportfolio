@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  Award,
   BookOpen,
   Download,
   Eye,
@@ -21,7 +20,6 @@ import {
 import { Reveal, Section, SectionHeading } from "./Reveal";
 import {
   CV_URL,
-  achievements,
   approach,
   courses,
   profile,
@@ -147,24 +145,6 @@ export function Certifications() {
   );
 }
 
-export function Achievements() {
-  return (
-    <Section id="achievements">
-      <SectionHeading index="09" title="Achievements" />
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {achievements.map((a, i) => (
-          <Reveal key={a.title} delay={i * 0.04}>
-            <article className="card-hover glass h-full rounded-xl p-6">
-              <Award className="size-5 text-primary" aria-hidden="true" />
-              <h3 className="mt-4 text-base font-semibold">{a.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{a.text}</p>
-            </article>
-          </Reveal>
-        ))}
-      </div>
-    </Section>
-  );
-}
 
 export function Testimonials() {
   return (
