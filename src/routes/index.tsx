@@ -4,7 +4,6 @@ import { Hero } from "@/components/site/Hero";
 import { About, Education, Experience, Services, Skills } from "@/components/site/CoreSections";
 import { Projects } from "@/components/site/Projects";
 import {
-  Achievements,
   Approach,
   CallToAction,
   Certifications,
@@ -44,7 +43,6 @@ function Index() {
         <Services />
         <Projects />
         <Certifications />
-        <Achievements />
         <Testimonials />
         <Approach />
         <CallToAction />
