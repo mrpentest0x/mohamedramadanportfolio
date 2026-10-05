@@ -49,18 +49,6 @@ export function About() {
             </ul>
           </Reveal>
         </div>
-        <Reveal delay={0.1}>
-          <figure className="glass relative h-full rounded-xl p-7">
-            <Quote className="size-7 text-primary" aria-hidden="true" />
-            <blockquote className="mt-5 font-display text-xl leading-snug sm:text-2xl">
-              &ldquo;I don&apos;t just study vulnerabilities — I try to understand why they exist,
-              how they can be exploited, and how systems can become more resilient.&rdquo;
-            </blockquote>
-            <figcaption className="mt-6 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
-              Mohamed Ramadan
-            </figcaption>
-          </figure>
-        </Reveal>
       </div>
     </Section>
   );
