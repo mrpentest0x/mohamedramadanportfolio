@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { GraduationCap, HeartHandshake, Quote, Terminal } from "lucide-react";
+import { GraduationCap, HeartHandshake, Terminal } from "lucide-react";
 import { Reveal, Section, SectionHeading } from "./Reveal";
 import { experience, services, skillGroups, volunteering } from "@/lib/portfolio-data";
 
