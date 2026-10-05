@@ -134,6 +134,8 @@ export const experience = [
   {
     role: "Cybersecurity Training",
     org: "National Telecommunication Institute (NTI) | NTRA",
+    start: "Jan 2026",
+    end: "Jun 2026",
     description:
       "Completed applied training in cybersecurity fundamentals, network security, and penetration testing.",
     tags: ["Kali Linux", "Nmap", "Wireshark", "Network Security", "Penetration Testing"],
@@ -141,6 +143,8 @@ export const experience = [
   {
     role: "Cisco Networking & Security",
     org: "Cisco Networking Academy",
+    start: "Sep 2024",
+    end: "Jan 2025",
     description:
       "Completed practical training in network configuration, IP routing, VLANs, and access control lists.",
     tags: [
@@ -156,6 +160,8 @@ export const experience = [
   {
     role: "Splunk Security Monitoring",
     org: "Splunk",
+    start: "May 2024",
+    end: "Aug 2024",
     description:
       "Gained practical experience in centralized log collection, monitoring, and security event analysis.",
     tags: [
@@ -170,6 +176,8 @@ export const experience = [
   {
     role: "Database & SQL",
     org: "MySQL",
+    start: "Feb 2024",
+    end: "May 2024",
     description:
       "Developed practical experience in relational database design and SQL query development.",
     tags: ["Tables", "Relationships", "Joins", "Data Management", "SQL"],
@@ -224,6 +232,8 @@ export const projects = [
   {
     title: "Web Security Practice Lab",
     github: "https://github.com/LMD10/owasp-top10-web-vulnerability-analysis",
+    start: "Apr 2026",
+    end: "Jun 2026",
     overview:
       "Conducted web application security testing in a controlled training environment using Burp Suite.",
     objective:
@@ -246,6 +256,8 @@ export const projects = [
   {
     title: "Network Penetration Testing Lab",
     github: "https://github.com/PedroFBRM/nmap-scan-analysis-lab",
+    start: "Jan 2026",
+    end: "Mar 2026",
     overview:
       "Performed network reconnaissance and enumeration using Nmap in an authorized lab environment.",
     objective: "Map hosts and services on a lab network and study their exposure.",
@@ -268,6 +280,8 @@ export const projects = [
   {
     title: "Networking Labs",
     github: "https://github.com/panhapichkhe/secure-small-enterprise-network",
+    start: "Oct 2024",
+    end: "Jan 2025",
     overview: "Designed and configured networking environments using Cisco Packet Tracer.",
     objective: "Build working topologies and practise structured troubleshooting.",
     tech: [
@@ -288,6 +302,8 @@ export const projects = [
   {
     title: "Splunk Security Monitoring",
     github: "https://github.com/barkha-17/SOC-Security-Monitoring-Splunk",
+    start: "May 2024",
+    end: "Aug 2024",
     overview:
       "Built a centralized log collection and monitoring setup across multiple virtual machines.",
     objective: "Bring logs from several systems into one place and review security events.",
