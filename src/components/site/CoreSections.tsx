@@ -222,7 +222,7 @@ export function Services() {
     <Section id="services">
       <SectionHeading
         index="06"
-        title="What I Can Do"
+        title="Offered Services"
         lead="Areas of capability I work in — inside authorized labs and training environments."
       />
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
