@@ -171,9 +171,14 @@ export function Experience() {
               aria-hidden="true"
             />
             <Reveal delay={i * 0.05}>
-              <p className="font-mono text-[11px] tracking-widest text-primary">
-                ENTRY {String(i + 1).padStart(2, "0")}
-              </p>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <p className="font-mono text-[11px] tracking-widest text-primary">
+                  ENTRY {String(i + 1).padStart(2, "0")}
+                </p>
+                <span className="font-mono text-[11px] tracking-widest text-muted-foreground">
+                  {e.start} — {e.end}
+                </span>
+              </div>
               <h3 className="mt-2 text-xl font-semibold sm:text-2xl">{e.role}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{e.org}</p>
               <p className="mt-3 max-w-2xl leading-relaxed text-foreground/80">{e.description}</p>

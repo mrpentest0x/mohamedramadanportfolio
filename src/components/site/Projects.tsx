@@ -29,7 +29,12 @@ export function Projects() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="flex-1">
-                    <h3 className="text-lg font-semibold sm:text-2xl">{p.title}</h3>
+                    <span className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                      <h3 className="text-lg font-semibold sm:text-2xl">{p.title}</h3>
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-primary">
+                        {p.start} — {p.end}
+                      </span>
+                    </span>
                     <span className="mt-2 block text-sm leading-relaxed text-muted-foreground">
                       {p.overview}
                     </span>
