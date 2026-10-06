@@ -13,6 +13,10 @@ import moazTestimonial from "@/assets/testimonials/moaz-mohamed.jpeg.asset.json"
 import hamdyTestimonial from "@/assets/testimonials/hamdy-mohamed.jpeg.asset.json";
 import mohamedTestimonial from "@/assets/testimonials/mohamed-ahmed.jpeg.asset.json";
 import mazenTestimonial from "@/assets/testimonials/mazen-ahmed.jpeg.asset.json";
+import webSecurityLabImg from "@/assets/projects/web-security-lab.jpeg.asset.json";
+import networkPentestLabImg from "@/assets/projects/network-pentest-lab.jpeg.asset.json";
+import networkingLabsImg from "@/assets/projects/networking-labs.jpeg.asset.json";
+import splunkMonitoringImg from "@/assets/projects/splunk-monitoring.jpeg.asset.json";
 
 export const CV_URL = cvAsset.url;
 
@@ -232,6 +236,7 @@ export const projects = [
   {
     title: "Web Security Practice Lab",
     github: "https://github.com/LMD10/owasp-top10-web-vulnerability-analysis",
+    image: webSecurityLabImg.url,
     start: "Apr 2026",
     end: "Jun 2026",
     overview:
@@ -256,6 +261,7 @@ export const projects = [
   {
     title: "Network Penetration Testing Lab",
     github: "https://github.com/PedroFBRM/nmap-scan-analysis-lab",
+    image: networkPentestLabImg.url,
     start: "Jan 2026",
     end: "Mar 2026",
     overview:
@@ -280,6 +286,7 @@ export const projects = [
   {
     title: "Networking Labs",
     github: "https://github.com/panhapichkhe/secure-small-enterprise-network",
+    image: networkingLabsImg.url,
     start: "Oct 2024",
     end: "Jan 2025",
     overview: "Designed and configured networking environments using Cisco Packet Tracer.",
@@ -302,6 +309,7 @@ export const projects = [
   {
     title: "Splunk Security Monitoring",
     github: "https://github.com/barkha-17/SOC-Security-Monitoring-Splunk",
+    image: splunkMonitoringImg.url,
     start: "May 2024",
     end: "Aug 2024",
     overview:
