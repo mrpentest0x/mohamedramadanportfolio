@@ -236,6 +236,7 @@ export const projects = [
   {
     title: "Web Security Practice Lab",
     github: "https://github.com/LMD10/owasp-top10-web-vulnerability-analysis",
+    image: webSecurityLabImg.url,
     start: "Apr 2026",
     end: "Jun 2026",
     overview:
@@ -260,6 +261,7 @@ export const projects = [
   {
     title: "Network Penetration Testing Lab",
     github: "https://github.com/PedroFBRM/nmap-scan-analysis-lab",
+    image: networkPentestLabImg.url,
     start: "Jan 2026",
     end: "Mar 2026",
     overview:
@@ -284,6 +286,7 @@ export const projects = [
   {
     title: "Networking Labs",
     github: "https://github.com/panhapichkhe/secure-small-enterprise-network",
+    image: networkingLabsImg.url,
     start: "Oct 2024",
     end: "Jan 2025",
     overview: "Designed and configured networking environments using Cisco Packet Tracer.",
@@ -306,6 +309,7 @@ export const projects = [
   {
     title: "Splunk Security Monitoring",
     github: "https://github.com/barkha-17/SOC-Security-Monitoring-Splunk",
+    image: splunkMonitoringImg.url,
     start: "May 2024",
     end: "Aug 2024",
     overview:
