@@ -8,6 +8,7 @@ import {
   Linkedin,
   MessageSquareQuote,
   ShieldCheck,
+  Youtube,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
