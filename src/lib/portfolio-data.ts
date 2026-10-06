@@ -13,6 +13,10 @@ import moazTestimonial from "@/assets/testimonials/moaz-mohamed.jpeg.asset.json"
 import hamdyTestimonial from "@/assets/testimonials/hamdy-mohamed.jpeg.asset.json";
 import mohamedTestimonial from "@/assets/testimonials/mohamed-ahmed.jpeg.asset.json";
 import mazenTestimonial from "@/assets/testimonials/mazen-ahmed.jpeg.asset.json";
+import webSecurityLabImg from "@/assets/projects/web-security-lab.jpeg.asset.json";
+import networkPentestLabImg from "@/assets/projects/network-pentest-lab.jpeg.asset.json";
+import networkingLabsImg from "@/assets/projects/networking-labs.jpeg.asset.json";
+import splunkMonitoringImg from "@/assets/projects/splunk-monitoring.jpeg.asset.json";
 
 export const CV_URL = cvAsset.url;
 
