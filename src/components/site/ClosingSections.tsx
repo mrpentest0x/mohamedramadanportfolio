@@ -8,6 +8,7 @@ import {
   Linkedin,
   MessageSquareQuote,
   ShieldCheck,
+  Youtube,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -200,18 +201,41 @@ export function Approach() {
         />
         <ol className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {approach.map((a, i) => (
-            <li key={a.step} className="bg-background">
-              <Reveal delay={i * 0.06}>
-                <div className="group relative h-full p-8 transition-colors hover:bg-primary/5">
+            <li key={a.step} className="flex bg-background">
+              <Reveal delay={i * 0.06} className="h-full">
+                <div className="group relative flex h-full flex-col p-8 transition-colors hover:bg-primary/5">
                   <span className="font-mono text-4xl font-bold text-primary/25 transition-colors group-hover:text-primary/60">
                     {a.step}
                   </span>
                   <h3 className="mt-4 text-lg font-bold uppercase tracking-wide">{a.name}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.text}</p>
-                  <span
-                    className="mt-6 block h-px w-10 bg-primary transition-all duration-300 group-hover:w-24"
-                    aria-hidden="true"
-                  />
+                  <div className="mt-auto pt-6">
+                    <span
+                      className="block h-px w-10 bg-primary transition-all duration-300 group-hover:w-24"
+                      aria-hidden="true"
+                    />
+                    {a.video ? (
+                      <a
+                        href={a.video.url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label={`Watch ${a.video.title} by ${a.video.channel} on YouTube`}
+                        className="group/video mt-6 flex items-start gap-3 rounded-lg border border-border bg-card/60 p-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-primary/10 hover:shadow-lg hover:shadow-primary/10"
+                      >
+                        <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-md border border-primary/30 bg-primary/10 text-primary transition-colors duration-300 group-hover/video:bg-primary/20">
+                          <Youtube className="size-4" aria-hidden="true" />
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block min-h-8 text-xs font-semibold leading-snug text-foreground transition-colors duration-300 group-hover/video:text-primary">
+                            {a.video.title}
+                          </span>
+                          <span className="mt-1 block font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                            YouTube · {a.video.channel}
+                          </span>
+                        </span>
+                      </a>
+                    ) : null}
+                  </div>
                 </div>
               </Reveal>
             </li>

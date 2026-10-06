@@ -412,18 +412,64 @@ export const achievements = [
 ];
 
 export const approach = [
-  { step: "01", name: "Recon", text: "Understand the target and attack surface." },
+  {
+    step: "01",
+    name: "Recon",
+    text: "Understand the target and attack surface.",
+    video: {
+      title: "Use Nmap for Tactical Network Reconnaissance",
+      channel: "Null Byte",
+      url: "https://www.youtube.com/watch?v=ltEFbi_I2KY",
+    },
+  },
   {
     step: "02",
     name: "Enumeration",
     text: "Identify services, technologies, and potential entry points.",
+    video: {
+      title: "Penetration Testing with Nmap",
+      channel: "Nielsen Networking",
+      url: "https://www.youtube.com/watch?v=wlqUO09J-nw",
+    },
   },
-  { step: "03", name: "Analysis", text: "Study vulnerabilities and security weaknesses." },
-  { step: "04", name: "Validation", text: "Test findings in an authorized environment." },
-  { step: "05", name: "Documentation", text: "Clearly document findings and evidence." },
+  {
+    step: "03",
+    name: "Analysis",
+    text: "Study vulnerabilities and security weaknesses.",
+    video: {
+      title: "The Complete Vulnerability Assessment Process",
+      channel: "Eduonix",
+      url: "https://www.youtube.com/watch?v=Jf4lCbO54yQ",
+    },
+  },
+  {
+    step: "04",
+    name: "Validation",
+    text: "Test findings in an authorized environment.",
+    video: {
+      title: "Penetration Testing with Metasploit",
+      channel: "Nielsen Networking",
+      url: "https://www.youtube.com/watch?v=Keld6Wi8aZ4",
+    },
+  },
+  {
+    step: "05",
+    name: "Documentation",
+    text: "Clearly document findings and evidence.",
+    video: {
+      title: "Writing An Effective Penetration Testing Report",
+      channel: "Semi Yulianto",
+      url: "https://www.youtube.com/watch?v=OKN5pUgQKIM",
+    },
+  },
   {
     step: "06",
     name: "Improvement",
     text: "Recommend security improvements and mitigation strategies.",
+    video: {
+      title: "How To Write A Pentest Report That Gets Your Findings Fixed",
+      channel: "NahamSec",
+      url: "https://www.youtube.com/watch?v=oBtJ7bryKII",
+    },
   },
 ];
