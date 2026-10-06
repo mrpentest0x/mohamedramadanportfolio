@@ -438,7 +438,7 @@ export const approach = [
     text: "Study vulnerabilities and security weaknesses.",
     video: {
       title: "The Complete Vulnerability Assessment Process",
-      channel: "Eduonix Learning Solutions",
+      channel: "Eduonix",
       url: "https://www.youtube.com/watch?v=Jf4lCbO54yQ",
     },
   },
