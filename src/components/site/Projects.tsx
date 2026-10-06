@@ -19,6 +19,20 @@ export function Projects() {
           return (
             <Reveal key={p.title} delay={i * 0.04}>
               <article className="glass overflow-hidden rounded-xl">
+                {p.image ? (
+                  <div className="group/img relative overflow-hidden border-b border-border bg-background">
+                    <img
+                      src={p.image}
+                      alt={`${p.title} screenshot`}
+                      loading="lazy"
+                      className="aspect-video w-full object-cover object-top transition-transform duration-500 group-hover/img:scale-[1.02]"
+                    />
+                    <div
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent"
+                      aria-hidden="true"
+                    />
+                  </div>
+                ) : null}
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
