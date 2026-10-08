@@ -94,9 +94,6 @@ export function Education() {
               ))}
             </ul>
           </div>
-          <div className="mt-7 border-t border-border pt-6 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
-            Languages — Arabic (Native) · English (Fluent)
-          </div>
         </article>
       </Reveal>
     </Section>
