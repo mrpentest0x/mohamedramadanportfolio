@@ -88,10 +88,6 @@ export function Hero() {
               aria-hidden="true"
             />
           </div>
-          <div className="flex items-center justify-between border-t border-border pt-3 font-mono text-[11px] tracking-widest text-muted-foreground">
-            <span>$ whoami</span>
-            <span className="text-primary">mohamed.ramadan</span>
-          </div>
         </motion.div>
       </div>
     </section>
