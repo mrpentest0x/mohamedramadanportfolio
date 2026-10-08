@@ -132,6 +132,25 @@ export const skillGroups = [
     ],
   },
   { name: "Languages", items: ["Arabic", "English"] },
+  {
+    name: "Soft Skills",
+    items: [
+      "Communication Skills",
+      "Time Management",
+      "Problem Solving",
+      "Teamwork",
+      "Attention to Detail",
+      "Adaptability",
+      "Creativity",
+      "Organization Skills",
+      "Active Listening",
+      "Client Relationship Management",
+      "Critical Thinking",
+      "Negotiation Skills",
+      "Fast Learning",
+      "Responsibility",
+    ],
+  },
 ];
 
 export const experience = [
